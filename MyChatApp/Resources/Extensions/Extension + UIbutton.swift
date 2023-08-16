@@ -2,7 +2,7 @@
 //  Extension + UIbutton.swift
 //  MyChatApp
 //
-//  Created by mac on 08/07/2023.
+//  Created by Prof K on 08/07/2023.
 //
 
 import UIKit
@@ -22,5 +22,6 @@ extension UIButton {
         self.cornerRadius = cornerRadius
         self.layer.masksToBounds = true
         self.titleLabel?.font = titleFont
+        self.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
     }
 }

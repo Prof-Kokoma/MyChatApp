@@ -2,7 +2,7 @@
 //  Extension + TextField.swift
 //  MyChatApp
 //
-//  Created by mac on 08/07/2023.
+//  Created by Prof K on 08/07/2023.
 //
 
 import UIKit
@@ -21,5 +21,6 @@ extension UITextField {
         self.backgroundColor = .systemBackground
         self.placeholder = placeholder
         self.isSecureTextEntry = isSecureField
+        self.addTarget(self, action: #selector(shoudReturn), for: .editingDidEndOnExit)
     }
 }

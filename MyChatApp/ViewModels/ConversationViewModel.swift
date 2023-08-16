@@ -2,7 +2,7 @@
 //  ConversationViewModel.swift
 //  MyChatApp
 //
-//  Created by mac on 08/07/2023.
+//  Created by Prof K on 08/07/2023.
 //
 
 import Foundation
@@ -15,10 +15,9 @@ class ConversationViewModel {
     }
     
     func getUserLoginState() {
-        if let userLoggedIn = retrieveData(UserdefaultKeys.login.identifier, type: Bool.self) {
-            isUserLoggedIn = userLoggedIn
-        }
+        isUserLoggedIn = !validateCurrentUser()
     }
 }
 
 extension ConversationViewModel: UserdefaultDataStorageInterface { }
+extension ConversationViewModel: ValidateCurrentUser { }
